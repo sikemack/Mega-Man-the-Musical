@@ -152,6 +152,9 @@ Resources
 	[i:robotResources %name="Bomb" %icon="3,2"]
 	[i:robotResources %name="Fire" %icon="4,2"]
 	[i:robotResources %name="Elec" %icon="5,2"]
+	[i:robotResources %name="Time" %icon="6,2"]
+	[i:robotResources %name="Oil" %icon="7,2"]
+	[i:robotResources %name="Bond" %icon="8,2"]
 	[i:robotResources %name="Mega" %icon="0,1"]
 
 Buildings
@@ -184,6 +187,9 @@ Buildings
 	[i:robotMaster %name="Bomb" %code="DLN." %number="006" %flavor="No show is complete without some minor explosions, and Bomb Man will make them MAJOR." %icon="3,2" %z="2.5" %p="0.03" %cost="3000"]
 	[i:robotMaster %name="Fire" %code="DLN." %number="007" %flavor="Master of pyrotechnics, and well versed fighter, Fire Man will bring the heat to the stage like no other." %icon="4,2" %z="2.5" %p="0.04" %cost="3000"]
 	[i:robotMaster %name="Elec" %code="DLN." %number="008" %flavor="Hailed as one of Dr. Light's greatest creations, he can handle the electricity of nuclear plants. Handling the theater should be no problem, right?" %icon="5,2" %z="2.5" %p="0.04" %cost="3000"]
+	[i:robotMaster %name="Time" %code="DLN." %number="00A" %flavor="One of the understudies for the first act's action, Time Man also helps out with slow-mo sequences." %icon="6,2" %z="2.5" %p="0.05" %cost="3000"]
+	[i:robotMaster %name="Oil" %code="DLN." %number="00B" %flavor="Your typical punk who entered into the theater scene on accident, he's only an understudy, but eager to prove himself." %icon="7,2" %z="2.5" %p="0.05" %cost="3000"]
+	[i:robotMaster %name="Bond" %code="DLN." %number="00C" %flavor="As understudy to the understudies, Bond Man is unlikely to ever end up on stage, but he's fine with that. After all, who's better than he with set assembly?" %icon="8,2" %z="2.5" %p="0.06" %cost="3000"]
 	[i:robotMaster %name="Mega" %textColor="0070e8" %code="DLN." %number="001" %flavor="The star of the show." %icon="0,1" %z="5000" %p="0.1" %increase="135" %cost="950000"]
 
 Upgrades
@@ -285,6 +291,21 @@ Upgrades
 	[i:gearVariant %name="Elec" %flavor="Licking it makes your tongue tingle." %icon="5,2" %req="25" %cost="100000"]
 	[i:robotUpgrades %robot="Elec" %name1="Surge Protectors" %name2="Electric Guitar" %flavor1="While he pumps out a lot of energy, sometimes it's too much for the theater to handle. These will prevent any serious damage." %flavor2="With so much Publicity, it only seemed right to get Elec Man a new Electric Guitar." %icon="5,2" %cost1="200000" %cost2="120000"]
 	[i:specialWeapon %robot="Elec" %name="Thunder Beam" %flavor="A high power weapon capable of massive destruction." %icon="5,2" %target="Ice"]
+	//Time Man
+	[i:unlockUpgrade %robot="Time" %name="Pocketwatch" %flavor="Not the best means of keeping time, but certainly good enough. May even open the doors to someone better at it." %icon="6,2" %req="sideResearch" %boost="3" %cost="3000"]
+	[i:gearVariant %name="Time" %flavor="Makes you feel timely." %icon="6,2" %req="25" %cost="100000"]
+	[i:robotUpgrades %robot="Time" %name1="Recalibrated Clocks" %name2="Time to Shine" %flavor1="See, your clocks were just ever so slightly off, but they're fine now." %flavor2="Time Man has attracted enough Publicity that a night is set aside when he is guaranteed to perform!" %icon="6,2" %cost1="200000" %cost2="120000"]
+	[i:specialWeapon %robot="Time" %name="Time Slow" %flavor="Time Slow slows the passage of time itself for limited periods, which lets him help with slow-motion scenes." %icon="6,2" %target="Bond"]
+	//Oil Man
+	[i:unlockUpgrade %robot="Oil" %name="Oil Pipes" %flavor="Gets oil from point A to point B. Of course, you'll need an expert to maintain them." %icon="7,2" %req="sideResearch" %boost="3" %cost="3000"]
+	[i:gearVariant %name="Oil" %flavor="You probably shouldn't get it near flames of any kind." %icon="7,2" %req="25" %cost="100000"]
+	[i:robotUpgrades %robot="Oil" %name1="Environmentally Friendly Oil" %name2="New Scarf" %flavor1="Oil Man's oil already works on just about anything, but now it's better for the environment." %flavor2="Oil Man gets a New Scarf just for his on-stage debut! Finally in the spotlight, at the cost of some Publicity." %icon="7,2" %cost1="200000" %cost2="120000"]
+	[i:specialWeapon %robot="Oil" %name="Oil Slider" %flavor="With this oily blob that can be used as a board, now Oil Man's can pull some sick stunts." %icon="7,2" %target="Time"]
+	//Bond Man
+	[i:unlockUpgrade %robot="Bond" %name="Wood Glue" %flavor="Nails and screws only do half the job in set building. This stuff can really hold things together. Might help to have someone acquainted with it though..." %icon="8,2" %req="comicResearch" %boost="3" %cost="3000"]
+	[i:gearVariant %name="Bond" %flavor="It's kinda sticky." %icon="8,2" %req="25" %cost="100000"]
+	[i:robotUpgrades %robot="Bond" %name1="Gorilla Glue" %name2="Cult Following" %flavor1="One of the toughest glues you can find on the market." %flavor2="Despite everything, it seems Bond Man has a bevy of fans! So, he'll get at least one night on the big stage." %icon="8,2" %cost1="200000" %cost2="120000"]
+	[i:specialWeapon %robot="Bond" %name="Bond Adhesive" %flavor="A highly effective glue." %icon="8,2" %target="Oil"]
 	//Mega Man
 	[i:unlockUpgrade %robot="Mega" %name="Weapon Copy System" %flavor="Allows your star to mimic the weapons of the Robot Masters. Oh wait, the star. Knew we were forgetting something." %icon="0,1" %req="50 CutMan, 50 GutsMan, 50 IceMan, 50 BombMan, 50 FireMan, 50 ElecMan" %boost="7" %cost="250000000"]
 	*MegaUpgrade10
@@ -416,6 +437,9 @@ Achievements
 	[i:robotAchievements %robot="Bomb" %name10="Cherry Bomb" %name25="Dynamite" %name50="Mine" %name75="TNT" %name100="C4" %icon="3,2"]
 	[i:robotAchievements %robot="Fire" %name10="Heat Miser" %name25="Mr. Sun" %name50="Green Christmas" %name75="12000°" %name100="Starting to Melt" %icon="4,2"]
 	[i:robotAchievements %robot="Elec" %name10="Cell Battery" %name25="AA Battery" %name50="Car Battery" %name75="High Voltage" %name100="Live Wire" %icon="5,2"]
+	[i:robotAchievements %robot="Time" %name10="Second Hand" %name25="Minute Hand" %name50="Hour Hand" %name75="Day Hand" %name100="Week Hand" %icon="6,2"]
+	[i:robotAchievements %robot="Oil" %name10="Crude Oil" %name25="& Vinegar" %name50="No Spills Here" %name75="Black Gold" %name100="Pitch Drop" %icon="7,2"]
+	[i:robotAchievements %robot="Bond" %name10="Gluestick" %name25="Who Need's Elmer's?" %name50="Stuck Together" %name75="Insolvable" %name100="Industrial Strength" %icon="8,2"]
 	[i:robotAchievements %robot="Mega" %name10="Rockin'" %name25="Rollin'" %name50="Bustin'" %name75="Mega" %name100="Man" %icon="0,1"]
 	//Playtime
 	*stickingAround
@@ -444,6 +468,11 @@ Achievements
 		desc:Have all the actors needed for the first act.
 		icon:icons[0,0] icons[0,1]
 		req:1 Roll, 1 CutMan, 1 GutsMan, 1 IceMan, 1 BombMan, 1 FireMan, 1 ElecMan, 1 MegaMan
+	*understudies
+		name:Understudies
+		desc:Have all the first act's understudies.
+		icon:icons[0,0] icons[8,2]
+		req:1 timeMan, 1 oilMan, 1 bondMan
 	//? Cans
 	*canAchieveOne
 		name:Questionable Contents
@@ -480,30 +509,6 @@ Shinies
 			if (canClicks = 3) toast The ? Can reveals a new upgrade.
 			if (canClicks = 10) toast The ? Can reveals a new upgrade.
 			if (canClicks = 20) toast The ? Can reveals a new upgrade.
-			/*
-			if (chance(10%) and timeUnlock=0 and roll>=10)
-				toast The ? Can reveals a new upgrade.
-				yield timeUnlock
-			else if (chance(10%) and oilUnlock=0 and timeUnlock=1 and roll>=10)
-				toast The ? Can reveals a new upgrade.
-				yield oilUnlock
-			else if (chance(10%) and bondUnlock=0 and timeUnlock=1 and oilUnlock=1 and roll>=10)
-				toast The ? Can reveals a new upgrade.
-				yield bondUnlock
-			else if (chance(5%) and enkerUnlock=0 and (metalMan>=10, airMan>=10, bubbleMan>=10, quickMan>=10, crashMan>=10, flashMan>=10, heatMan>=10, woodMan>=10))
-				toast The ? Can reveals a new upgrade.
-				yield enkerUnlock
-			else if (chance(10%) and quakeUnlock=0 and rush>=10)
-				toast The ? Can reveals a new upgrade.
-				yield quakeUnlock
-			else if (chance(5%) and quintUnlock=0 and protoMan>=10)
-				toast The ? Can reveals a new upgrade.
-				yield quintUnlock
-			else if (chance(10%) and vesperUnlock=0 and quakeWoman>=1 and protoMan>=25)
-				toast The ? Can reveals a new upgrade.
-				yield vesperUnlock
-			else if (chance(15%) and canUpgradeThree=1)
-			*/
 			if (chance(15%) and canUpgradeThree=1)
 				toast The ? Can grants you 1 Yashichi.
 				yield 1 yashichi
@@ -514,7 +519,6 @@ Shinies
 				$amount=max(100,random(zenny:ps*60*2,zenny:ps*60*5))
 				toast The ? Can grants you<//><b>[$amount] Zenny</b>!
 				yield $amount zenny
-				//yield $amount canzpt
 			end
 		end
 
@@ -573,9 +577,9 @@ Includes
 				multiply yield of BombMan by [%boost]
 				multiply yield of FireMan by [%boost]
 				multiply yield of ElecMan by [%boost]
-				//multiply yield of TimeMan by [%boost]
-				//multiply yield of OilMan by [%boost]
-				//multiply yield of BondMan by [%boost]
+				multiply yield of TimeMan by [%boost]
+				multiply yield of OilMan by [%boost]
+				multiply yield of BondMan by [%boost]
 				multiply yield of MegaMan by [%boost]
 				//multiply yield of MetalMan by [%boost]
 				//multiply yield of AirMan by [%boost]
@@ -759,9 +763,9 @@ Includes
 			multiply yield of BombMan by [%boost]
 			multiply yield of FireMan by [%boost]
 			multiply yield of ElecMan by [%boost]
-			//multiply yield of TimeMan by [%boost]
-			//multiply yield of OilMan by [%boost]
-			//multiply yield of BondMan by [%boost]
+			multiply yield of TimeMan by [%boost]
+			multiply yield of OilMan by [%boost]
+			multiply yield of BondMan by [%boost]
 			multiply yield of MegaMan by [%boostPlus]
 			//multiply yield of MetalMan by [%boost]
 			//multiply yield of AirMan by [%boost]
