@@ -1,10 +1,11 @@
 TO DO:
 Randomized log popups based on current progression and publicity.
-Proper Log implementation, along with Start & Load text.
 DWN (Doctor Worm Number) for Mega Man 14 Robot Masters, IMN (Intern Model Number) for 12 & 13’s.
 Robots through Auto before we can call this thing playable, and send it out for testing.
-Implement research system, probably themed around Dad and his lab, 1 point every 20 minutes or so? Various threads to pull. One unlocks non-mainline content, which itself will be divided into several sub-projects, another will unlock synergy upgrades, which does the same. Some may cost more than one point.
 3 types of synergy upgrades, Forward, Backward, and Hidden. Hidden synergy upgrades are already present, but researching them will reveal their secondary effects. Oiled Skates buffing Roll as well as Top Man, for example. We’ll want one for at least Roll and Proto Man for each game, methinks. Forward synergy upgrades will buff a robot master as well as one from a later game, backwards will do the reverse. We may try and have synergy upgrades prices scale with zps, maybe pps actually.
 Non-Mainline Game Characters, Comic Characters, and Original Characters will each be packaged seperately.
 Revamp rush and other support units to be more in line with Gears, boosting either Mega only or a variety, will likely depend.
 Grapple seriously with the issue of art credit. We’re currently only using Time & Bond Man’s sprites illegally, but that will quite obviously change later down the line.
+Visible countdown for Bolt earning. Possibly displayed in minutes:seconds, if we can figure out the remainder.
+Re-evaluate if flavor-text can be worked in to Include-based achievements.
+Rig up an include for the Item-Line, possibly also incorporating Magnet Beam, depending on level of variance.
