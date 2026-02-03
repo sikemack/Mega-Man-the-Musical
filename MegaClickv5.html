@@ -145,6 +145,7 @@ Resources
 		icon:icons[0,0] icons[3,0]
 		always hidden
 		show earned
+	//Mega Man 1
 	[i:pinkResources %name="Roll" %icon="1,1"]
 	[i:robotResources %name="Cut" %icon="0,2"]
 	[i:robotResources %name="Guts" %icon="1,2"]
@@ -156,6 +157,15 @@ Resources
 	[i:robotResources %name="Oil" %icon="7,2"]
 	[i:robotResources %name="Bond" %icon="8,2"]
 	[i:robotResources %name="Mega" %icon="0,1"]
+	//Mega Man 2
+	[i:robotResources %name="Metal" %icon="0,3"]
+	[i:robotResources %name="Air" %icon="1,3"]
+	[i:robotResources %name="Bubble" %icon="2,3"]
+	[i:robotResources %name="Quick" %icon="3,3"]
+	[i:robotResources %name="Crash" %icon="4,3"]
+	[i:robotResources %name="Flash" %icon="5,3"]
+	[i:robotResources %name="Heat" %icon="6,3"]
+	[i:robotResources %name="Wood" %icon="7,3"]
 
 Buildings
 	*timer
@@ -169,6 +179,7 @@ Buildings
 			yield 0.00001157407407407407 yashichi
 		end
 		on start:log In the year 20XX...</>It is a rare moment of peace in an evolving world.</>A local Director has approached Light Labs with an interesting offer.</>They want to put on a Musical! One based on Mega Man and his adventures, but with a twist.</>They want Rock and his family, and as many of the Robot Masters as are willing, to actually star in the show!</>Now it's your job to assemble the cast, make sure they're at their best, and put on a great show!
+		on load:log Welcome back!
 		cost:0 zenny
 	*gear|gears
 		name:Gear|Gears
@@ -191,6 +202,15 @@ Buildings
 	[i:robotMaster %name="Oil" %code="DLN." %number="00B" %flavor="Your typical punk who entered into the theater scene on accident, he's only an understudy, but eager to prove himself." %icon="7,2" %z="2.5" %p="0.05" %cost="3000"]
 	[i:robotMaster %name="Bond" %code="DLN." %number="00C" %flavor="As understudy to the understudies, Bond Man is unlikely to ever end up on stage, but he's fine with that. After all, who's better than he with set assembly?" %icon="8,2" %z="2.5" %p="0.06" %cost="3000"]
 	[i:robotMaster %name="Mega" %textColor="0070e8" %code="DLN." %number="001" %flavor="The star of the show." %icon="0,1" %z="5000" %p="0.1" %increase="135" %cost="950000"]
+	//Mega Man 2
+	[i:robotMaster %name="Metal" %number="009" %flavor="As master of the deadly Metal Blade, Metal Man makes a strong first impression in our second act." %icon="0,3" %z="24000" %p="0.08" %cost="2400000"]
+	[i:robotMaster %name="Air" %number="010" %flavor="The first of a new design for Robot Masters, Air Man's intimidating appearance belies a talent with wind control that can help the show a good bit." %icon="1,3" %z="24000" %p="0.07" %cost="2400000"]
+	[i:robotMaster %name="Bubble" %number="011" %flavor="Able to swim like no Robot before him, Bubble Man will make your underwater scenes unforgettable." %icon="2,3" %z="24000" %p="0.07" %cost="2400000"]
+	[i:robotMaster %name="Quick" %number="012" %flavor="The ultimate Gofer, Quick Man can get you what the Theater needs faster than you can imagine." %icon="3,3" %z="24000" %p="0.08" %cost="2400000"]
+	[i:robotMaster %name="Crash" %number="013" %flavor="Quick to anger, but a hard worker, Crash Man has demolitions covered." %icon="4,3" %z="24000" %p="0.07" %cost="2400000"]
+	[i:robotMaster %name="Flash" %number="014" %flavor="Perfecting the tech that went into Time Man, Flash Man's ability to stop time allows for instant scene changes." %icon="5,3" %z="24000" %p="0.07" %cost="2400000"]
+	[i:robotMaster %name="Heat" %number="015" %flavor="Improving on Fire Man's design, Heat Man's heat resistance lets him get right up in the action." %icon="6,3" %z="24000" %p="0.08" %cost="2400000"]
+	[i:robotMaster %name="Wood" %number="016" %flavor="A unique Robot made from japanese cypresses, Wood Man brings a natural touch to the stage." %icon="7,3" %z="24000" %p="0.09" %cost="2400000"]
 
 Upgrades
 	//Zenny Buster
@@ -337,6 +357,84 @@ Upgrades
 			increase Megappt yield of MegaMan by 1pop
 		end
 		cost:5000000000 zenny
+	/*
+	*ItemOne
+		name:Item-1
+		desc:A hovering platform to help reach tough spots, this Item boosts Mega Man's production by 1% of your production per second.
+		icon:icons[0,0] icons[9,0]
+		req:have atomicFire, 50 megaMan
+		passive:
+			increase zenny yield of megaMan by 1poz
+			increase megazpt yield of megaMan by 1poz
+			increase publicity yield of megaMan by 1pop
+			increase megappt yield of megaMan by 1pop
+		end
+		cost:10000000000000 zenny
+	*ItemTwo
+		name:Item-2
+		desc:The coolest way to travel (for now), this jet sled boosts Mega Man's production by 1% of your production per second.
+		icon:icons[0,0] icons[10,0]
+		req:have airShooter, 50 megaMan
+		passive:
+			increase zenny yield of megaMan by 1poz
+			increase megazpt yield of megaMan by 1poz
+			increase publicity yield of megaMan by 1pop
+			increase megappt yield of megaMan by 1pop
+		end
+		cost:10000000000000 zenny
+	*ItemThree
+		name:Item-3
+		desc:This crawling elevator platform was revolutionary for its time, and can still boost Mega Man's production by 1% of your production per second.
+		icon:icons[0,0] icons[11,0]
+		req:have timeStopper, 50 megaMan
+		passive:
+			increase zenny yield of megaMan by 1poz
+			increase megazpt yield of megaMan by 1poz
+			increase publicity yield of megaMan by 1pop
+			increase megappt yield of megaMan by 1pop
+		end
+		cost:10000000000000 zenny
+	*/
+	//Metal Man
+	[i:unlockUpgrade %robot="Metal" %name="Ceratanium Alloy" %flavor="A powerful material to help reinforce various things around the theater. May bring in someone used to the material..." %icon="0,3" %req="20 MegaMan" %boost="3" %cost="10000000000"]
+	[i:gearVariant %name="Metal" %flavor="This is practically a sawblade." %icon="0,3" %req="50" %cost="80000000000"]
+	[i:robotUpgrades %robot="Metal" %name1="Safety Training" %name2="Designer Frisbee" %flavor1="Makes it so Metal Man is no longer a danger to himself." %flavor2="A custom-made Frisbee just for Metal Man, well worth the dip in publicity. Just don't let Rush see it." %icon="0,3" %cost1="250000000000" %cost2="100000000"]
+	[i:specialWeapon %robot="Metal" %name="Metal Blade" %flavor="One of the most powerful weapons ever devised." %icon="0,3" %target="Bubble"]
+	//Air Man
+	[i:unlockUpgrade %robot="Air" %name="Fans" %flavor="The ones that increase airflow, not the ones attending the show. Might attract a fan of fans." %icon="1,3" %req="20 MegaMan" %boost="3" %cost="10000000000"]
+	[i:gearVariant %name="Air" %flavor="Creates a gentle breeze." %icon="1,3" %req="50" %cost="80000000000"]
+	[i:robotUpgrades %robot="Air" %name1="Typhoon" %name2="Fans" %flavor1="This impressive bit of on-stage weather is a marvel of special effects." %flavor2="Fans of fans come out in force to support Air Man thanks to his fame." %icon="1,3" %cost1="250000000000" %cost2="100000000"]
+	[i:specialWeapon %robot="Air" %name="Air Shooter" %flavor="This impressive weapon creates multiple whirlwinds at a time." %icon="1,3" %target="Crash"]
+	//Bubble Man
+	[i:unlockUpgrade %robot="Bubble" %name="Watertight Seals" %flavor="As Robots, your actors have the ability to perform underwater scenes genuinely underwater, but you'll need these seals to keep the audience dry. Come to think of it, you know just the actor for such a scene!" %icon="2,3" %req="20 MegaMan" %boost="3" %cost="10000000000"]
+	[i:gearVariant %name="Bubble" %flavor="Unsurprisingly, it's wet." %icon="2,3" %req="50" %cost="80000000000"]
+	[i:robotUpgrades %robot="Bubble" %name1="Walking Lessons" %name2="New Goggles" %flavor1="Helps Bubble Man walk rather than leap about like a frog." %flavor2="A pair of spiffy new goggles for Bubble Man." %icon="2,3" %cost1="250000000000" %cost2="100000000"]
+	[i:specialWeapon %robot="Bubble" %name="Bubble Lead" %flavor="Surprisingly versatile, as well as being fun to watch slide around." %icon="2,3" %target="Heat"]
+	//Quick Man
+	[i:unlockUpgrade %robot="Quick" %name="Coffee" %flavor="Robots may not need it, but some still like it. Now if only we had a proper gofer." %icon="3,3" %req="20 MegaMan" %boost="3" %cost="10000000000"]
+	[i:gearVariant %name="Quick" %flavor="Top speed unknown." %icon="3,3" %req="50" %cost="80000000000"]
+	[i:robotUpgrades %robot="Quick" %name1="Device Repair" %name2="Day at the Races" %flavor1="A fault in Quick Man's design left him vulnerable to Time Stopper, but we'd rather he not get hurt on stage. This is a quick fix." %flavor2="Quick Man is a major racing fan, so why not use some publicity to show him a good time?" %icon="3,3" %cost1="250000000000" %cost2="100000000"]
+	[i:specialWeapon %robot="Quick" %name="Quick Boomerang" %flavor="This high-speed Boomerang is the quintessential rapidfire option." %icon="3,3" %target="Metal"]
+	//Crash Man
+	[i:unlockUpgrade %robot="Crash" %name="Timers" %flavor="Useful for cues of all kinds, but knowing this show, they'll be primarily for explosion timing. Perhaps we'll find a specialist in time bombs soon." %icon="4,3" %req="20 MegaMan" %boost="3" %cost="10000000000"]
+	[i:gearVariant %name="Crash" %flavor="Alright, this one's definitely ticking." %icon="4,3" %req="50" %cost="80000000000"]
+	[i:robotUpgrades %robot="Crash" %name1="Anger Management Courses" %name2="Demolition Site" %flavor1="Crash Man is willing to seek out help, and we commend him for that." %flavor2="Crash Man almost never gets to go all out, so this fame-funded excursion to a demolition site he can destroy himself will help him work out some anger." %icon="4,3" %cost1="250000000000" %cost2="100000000"]
+	[i:specialWeapon %robot="Crash" %name="Crash Bomber" %flavor="These powerful explosives latch onto their target before detonating, dealing high damage." %icon="4,3" %target="Flash"]
+	//Flash Man
+	[i:unlockUpgrade %robot="Flash" %name="Stopped Clock" %flavor="It's right twice a day, and that's good enough. Now who does this remind me of?" %icon="5,3" %req="20 MegaMan" %boost="3" %cost="10000000000"]
+	[i:gearVariant %name="Flash" %flavor="Stunning." %icon="5,3" %req="50" %cost="80000000000"]
+	[i:robotUpgrades %robot="Flash" %name1="Quick Changes" %name2="Fancy Camera" %flavor1="Ensuring no time is lost when swapping costumes or setpieces, this time-honored theater tradition is faster than ever." %flavor2="This high-tech camera is right up Flash Man's alley, and well worth the publicity." %icon="5,3" %cost1="250000000000" %cost2="100000000"]
+	[i:specialWeapon %robot="Flash" %name="Time Stopper" %flavor="Stopping time itself for a bit easily raises plenty of opportunities." %icon="5,3" %target="Quick"]
+	//Heat Man
+	[i:unlockUpgrade %robot="Heat" %name="Zippo Lighter" %flavor="Somebody around here needs a light. Who'd you bum this off of, anyway?" %icon="6,3" %req="20 MegaMan" %boost="3" %cost="10000000000"]
+	[i:gearVariant %name="Heat" %flavor="Warm to the touch." %icon="6,3" %req="50" %cost="80000000000"]
+	[i:robotUpgrades %robot="Heat" %name1="Dial Control" %name2="Hot Dogs" %flavor1="This dial on Heat Man's back allows for fine-tuned temperature control." %flavor2="This latest addition to your concession stand is an big hit, well worth the publicity it took Heat Man to cook them." %icon="6,3" %cost1="250000000000" %cost2="100000000"]
+	[i:specialWeapon %robot="Heat" %name="Atomic Fire" %flavor="Immense heat that can be channeled into the show's first charging weapon." %icon="6,3" %target="Wood"]
+	//Wood Man
+	[i:unlockUpgrade %robot="Wood" %name="Lumber" %flavor="A shipment of wood for set-building. Wait, who's this inside?" %icon="7,3" %req="20 MegaMan" %boost="3" %cost="10000000000"]
+	[i:gearVariant %name="Wood" %flavor="Careful not to get a splinter." %icon="7,3" %req="50" %cost="80000000000"]
+	[i:robotUpgrades %robot="Wood" %name1="Reinforced Laminate" %name2="Pet Turtle" %flavor1="This laminate keeps Wood Man in good working order." %flavor2="A nice pet turtle for Wood Man." %icon="7,3" %cost1="250000000000" %cost2="100000000"]
+	[i:specialWeapon %robot="Wood" %name="Leaf Shield" %flavor="Rotating Ceratanium leaves that provide a powerful defensive option." %icon="7,3" %target="Air"]
 	//? Cans
 	*canUpgradeOne
 		name:Frequent Shipments
@@ -442,6 +540,15 @@ Achievements
 	[i:robotAchievements %robot="Oil" %name10="Crude Oil" %name25="& Vinegar" %name50="No Spills Here" %name75="Black Gold" %name100="Pitch Drop" %icon="7,2"]
 	[i:robotAchievements %robot="Bond" %name10="Gluestick" %name25="Who Need's Elmer's?" %name50="Stuck Together" %name75="Insolvable" %name100="Industrial Strength" %icon="8,2"]
 	[i:robotAchievements %robot="Mega" %name10="Rockin'" %name25="Rollin'" %name50="Bustin'" %name75="Mega" %name100="Man" %icon="0,1"]
+	//Mega Man 2
+	[i:robotAchievements %robot="Metal" %name10="Sharp" %name25="Sharper" %name50="Yet Sharper" %name75="Mind the Edge" %name100="Peak Performance" %icon="0,3"]
+	[i:robotAchievements %robot="Air" %name10="Breeze" %name25="Bluster" %name50="Gale" %name75="Tornado" %name100="Wind Surfing" %icon="1,3"]
+	[i:robotAchievements %robot="Bubble" %name10="Flippers" %name25="Snorkel" %name50="Frog Jump" %name75="Aquatic Expertise" %name100="Hot Springs" %icon="2,3"]
+	[i:robotAchievements %robot="Quick" %name10="Quick" %name25="Quicker" %name50="Yet Quicker" %name75="No, Quick, not Click" %name100="Quicker than the Quick" %icon="3,3"]
+	[i:robotAchievements %robot="Crash" %name10="Boom" %name25="Rage" %name50="Clash" %name75="Time Bomb" %name100="Wrecking Crew" %icon="4,3"]
+	[i:robotAchievements %robot="Flash" %name10="Flashbang" %name25="Behind You" %name50="Photo Finish" %name75="A-AH!" %name100="Blink and you'll miss him" %icon="5,3"]
+	[i:robotAchievements %robot="Heat" %name10="Heat Miser" %name25="Mr. Sun" %name50="Green Christmas" %name75="12000°" %name100="Starting to Melt" %icon="6,3"]
+	[i:robotAchievements %robot="Wood" %name10="Green Thumb" %name25="Solid Cypress" %name50=">:]" %name75="Friend of Wood" %name100="My Last Message" %icon="7,3"]
 	//Playtime
 	*stickingAround
 		name:Sticking Around
@@ -474,6 +581,11 @@ Achievements
 		desc:Have all the first act's understudies.
 		icon:icons[0,0] icons[8,2]
 		req:1 TimeMan, 1 OilMan, 1 BondMan
+	*act2
+		name:Act 2 Cast
+		desc:Have all the actors needed for the second act.
+		icon:icons[0,0] icons[3,3]
+		req:1 MegaMan, 1 MetalMan, 1 AirMan, 1 BubbleMan, 1 QuickMan, 1 CrashMan, 1 FlashMan, 1 HeatMan, 1 WoodMan
 	//? Cans
 	*canAchieveOne
 		name:Questionable Contents
@@ -582,14 +694,14 @@ Includes
 				multiply yield of OilMan by [%boost]
 				multiply yield of BondMan by [%boost]
 				multiply yield of MegaMan by [%boost]
-				//multiply yield of MetalMan by [%boost]
-				//multiply yield of AirMan by [%boost]
-				//multiply yield of BubbleMan by [%boost]
-				//multiply yield of QuickMan by [%boost]
-				//multiply yield of CrashMan by [%boost]
-				//multiply yield of FlashMan by [%boost]
-				//multiply yield of HeatMan by [%boost]
-				//multiply yield of WoodMan by [%boost]
+				multiply yield of MetalMan by [%boost]
+				multiply yield of AirMan by [%boost]
+				multiply yield of BubbleMan by [%boost]
+				multiply yield of QuickMan by [%boost]
+				multiply yield of CrashMan by [%boost]
+				multiply yield of FlashMan by [%boost]
+				multiply yield of HeatMan by [%boost]
+				multiply yield of WoodMan by [%boost]
 				//multiply yield of Enker by [%boost]
 				//multiply yield of Rush by [%boost]
 				//multiply yield of QuakeWoman by [%boost]
@@ -768,14 +880,14 @@ Includes
 			multiply yield of OilMan by [%boost]
 			multiply yield of BondMan by [%boost]
 			multiply yield of MegaMan by [%boostPlus]
-			//multiply yield of MetalMan by [%boost]
-			//multiply yield of AirMan by [%boost]
-			//multiply yield of BubbleMan by [%boost]
-			//multiply yield of QuickMan by [%boost]
-			//multiply yield of CrashMan by [%boost]
-			//multiply yield of FlashMan by [%boost]
-			//multiply yield of HeatMan by [%boost]
-			//multiply yield of WoodMan by [%boost]
+			multiply yield of MetalMan by [%boost]
+			multiply yield of AirMan by [%boost]
+			multiply yield of BubbleMan by [%boost]
+			multiply yield of QuickMan by [%boost]
+			multiply yield of CrashMan by [%boost]
+			multiply yield of FlashMan by [%boost]
+			multiply yield of HeatMan by [%boost]
+			multiply yield of WoodMan by [%boost]
 			//multiply yield of Enker by [%boost]
 			//multiply yield of Rush by [%boostPlus]
 			//multiply yield of QuakeWoman by [%boostPlus]
