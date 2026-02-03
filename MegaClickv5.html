@@ -77,6 +77,15 @@ Buttons
 		no text
 		icon:https://file.garden/ZsNT8FBfzxAupLGa/Mega%20Man%20the%20Musical/Zenny%20Bag.png
 		show clicks
+	*cheatZenny
+		name:Cheat Zenny
+		desc:Gives you 5 Minutes of your current production, for testing purposes.
+		on click:
+			yield (zenny:ps*300) zenny
+			yield (publicity:ps*300) publicity
+		end
+		no text
+		icon:icons[0,0] icons[5,0]
 
 Resources
 	*zenny
