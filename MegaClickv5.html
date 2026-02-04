@@ -3,7 +3,7 @@ Let's make a game!
  	by:Sike Mack
 	desc:Beat the Robot Masters. Upgrade yourself. Save the world. AND DO IT IN SONG.
 	created:6/20/16
-	updated:10/18/2024
+	updated:2/3/2026
 	version:5.0.0
 
 Settings
@@ -354,56 +354,10 @@ Upgrades
 		end
 		cost:500000000 zenny
 	[i:gearVariant %name="Mega" %flavor="Feels like you've accomplished something." %icon="0,1" %req="25" %cost="2500000000"]
-	*MegaUpgrade25
-		name:Magnet Beam
-		desc:Boosts Mega Man's production by <b>1%</b> of your total production per second.<q>A beam capable of creating mid-air platforms, this lets Rock pull off some sick stunts.</q>
-		icon:icons[0,0] icons[8,0]
-		req:have ElecWeapon, 25 MegaMan
-		passive:
-			increase zenny yield of MegaMan by 1poz
-			increase Megazpt yield of MegaMan by 1poz
-			increase publicity yield of MegaMan by 1pop
-			increase Megappt yield of MegaMan by 1pop
-		end
-		cost:5000000000 zenny
-	/*
-	*ItemOne
-		name:Item-1
-		desc:A hovering platform to help reach tough spots, this Item boosts Mega Man's production by 1% of your production per second.
-		icon:icons[0,0] icons[9,0]
-		req:have atomicFire, 50 megaMan
-		passive:
-			increase zenny yield of megaMan by 1poz
-			increase megazpt yield of megaMan by 1poz
-			increase publicity yield of megaMan by 1pop
-			increase megappt yield of megaMan by 1pop
-		end
-		cost:10000000000000 zenny
-	*ItemTwo
-		name:Item-2
-		desc:The coolest way to travel (for now), this jet sled boosts Mega Man's production by 1% of your production per second.
-		icon:icons[0,0] icons[10,0]
-		req:have airShooter, 50 megaMan
-		passive:
-			increase zenny yield of megaMan by 1poz
-			increase megazpt yield of megaMan by 1poz
-			increase publicity yield of megaMan by 1pop
-			increase megappt yield of megaMan by 1pop
-		end
-		cost:10000000000000 zenny
-	*ItemThree
-		name:Item-3
-		desc:This crawling elevator platform was revolutionary for its time, and can still boost Mega Man's production by 1% of your production per second.
-		icon:icons[0,0] icons[11,0]
-		req:have timeStopper, 50 megaMan
-		passive:
-			increase zenny yield of megaMan by 1poz
-			increase megazpt yield of megaMan by 1poz
-			increase publicity yield of megaMan by 1pop
-			increase megappt yield of megaMan by 1pop
-		end
-		cost:10000000000000 zenny
-	*/
+	[i:megaUpgrade %count="25" %name="Magnet Beam" %flavor="A beam capable of creating mid-air platforms, this lets Rock pull off some sick stunts." %icon="8,0" %weapon="Elec" %cost="5000000000"]
+	[i:megaUpgrade %count="50" %number="One" %name="Item-1" %flavor="A hovering platform to help reach tough spots." %icon="9,0" %weapon="Heat" %cost="10000000000000"]
+	[i:megaUpgrade %count="50" %number="Two" %name="Item-2" %flavor="This jet sled is the coolest way to travel (for now)." %icon="10,0" %weapon="Air" %cost="10000000000000"]
+	[i:megaUpgrade %count="50" %number="Three" %name="Item-3" %flavor="This crawling elevator platform was revolutionary for its time." %icon="11,0" %weapon="Flash" %cost="10000000000000"]
 	//Metal Man
 	[i:unlockUpgrade %robot="Metal" %name="Ceratanium Alloy" %flavor="A powerful material to help reinforce various things around the theater. May bring in someone used to the material..." %icon="0,3" %req="20 MegaMan" %boost="3" %cost="10000000000"]
 	[i:gearVariant %name="Metal" %flavor="This is practically a sawblade." %icon="0,3" %req="50" %cost="80000000000"]
@@ -555,9 +509,9 @@ Achievements
 	[i:robotAchievements %robot="Bubble" %name10="Flippers" %name25="Snorkel" %name50="Frog Jump" %name75="Aquatic Expertise" %name100="Hot Springs" %icon="2,3"]
 	[i:robotAchievements %robot="Quick" %name10="Quick" %name25="Quicker" %name50="Yet Quicker" %name75="No, Quick, not Click" %name100="Quicker than the Quick" %icon="3,3"]
 	[i:robotAchievements %robot="Crash" %name10="Boom" %name25="Rage" %name50="Clash" %name75="Time Bomb" %name100="Wrecking Crew" %icon="4,3"]
-	[i:robotAchievements %robot="Flash" %name10="Flashbang" %name25="Behind You" %name50="Photo Finish" %name75="A-AH!" %name100="Blink and you'll miss him" %icon="5,3"]
+	[i:robotAchievements %robot="Flash" %name10="Flashbang" %name25="Behind You" %name50="Photo Finish" %name75="A-AH!" %name100="Blink and you'll miss him" %flavor75=".<q>Savior of the universe!</q>" %icon="5,3"]
 	[i:robotAchievements %robot="Heat" %name10="Heat Miser" %name25="Mr. Sun" %name50="Green Christmas" %name75="12000°" %name100="Starting to Melt" %icon="6,3"]
-	[i:robotAchievements %robot="Wood" %name10="Green Thumb" %name25="Solid Cypress" %name50=">:]" %name75="Friend of Wood" %name100="My Last Message" %icon="7,3"]
+	[i:robotAchievements %robot="Wood" %name10="Green Thumb" %name25="Solid Cypress" %name50=">:]" %name75="Friend of Wood" %name100="My Last Message" %flavor100=".<q>Don't forget about me.</q>" %icon="7,3"]
 	//Playtime
 	*stickingAround
 		name:Sticking Around
@@ -912,3 +866,16 @@ Includes
 			//multiply yield of Quint by [%boost]
 			//multiply yield of VesperWoman by [%boostPlus]
 		end
+	*include megaUpgrade %count %number="" %name %flavor %icon %weapon %cost
+		*MegaUpgrade[%count][%number]
+			name:[%name]
+			desc:Boosts Mega Man's production by <b>1%</b> of your total production per second.<q>[%flavor]</q>
+			icon:icons[0,0] icons[[%icon]]
+			req:have [%weapon]Weapon, [%count] MegaMan
+			passive:
+				increase zenny yield of MegaMan by 1poz
+				increase Megazpt yield of MegaMan by 1poz
+				increase publicity yield of MegaMan by 1pop
+				increase Megappt yield of MegaMan by 1pop
+			end
+			cost:[%cost] zenny
