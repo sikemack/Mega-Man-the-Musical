@@ -355,7 +355,7 @@ Upgrades
 		cost:500000000 zenny
 	[i:gearVariant %name="Mega" %flavor="Feels like you've accomplished something." %icon="0,1" %req="25" %cost="2500000000"]
 	[i:megaUpgrade %count="25" %name="Magnet Beam" %flavor="A beam capable of creating mid-air platforms, this lets Rock pull off some sick stunts." %icon="8,0" %weapon="Elec" %cost="5000000000"]
-	[i:megaUpgrade %count="50" %number="One" %name="Item-1" %flavor="A hovering platform to help reach tough spots." %icon="9,0" %weapon="Heat" %cost="10000000000000"]
+	[i:megaUpgrade %count="50" %name="Item-1" %flavor="A hovering platform to help reach tough spots." %icon="9,0" %weapon="Heat" %cost="10000000000000"]
 	[i:megaUpgrade %count="50" %number="Two" %name="Item-2" %flavor="This jet sled is the coolest way to travel (for now)." %icon="10,0" %weapon="Air" %cost="10000000000000"]
 	[i:megaUpgrade %count="50" %number="Three" %name="Item-3" %flavor="This crawling elevator platform was revolutionary for its time." %icon="11,0" %weapon="Flash" %cost="10000000000000"]
 	//Metal Man
@@ -866,7 +866,7 @@ Includes
 			//multiply yield of Quint by [%boost]
 			//multiply yield of VesperWoman by [%boostPlus]
 		end
-	*include megaUpgrade %count %number="" %name %flavor %icon %weapon %cost
+	*include megaUpgrade %count %number="One" %name %flavor %icon %weapon %cost
 		*MegaUpgrade[%count][%number]
 			name:[%name]
 			desc:Boosts Mega Man's production by <b>1%</b> of your total production per second.<q>[%flavor]</q>
