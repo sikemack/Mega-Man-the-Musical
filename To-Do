@@ -6,3 +6,8 @@ Robots through Auto before we can call this thing playable, and send it out for 
 Revamp rush and other support units to be more in line with Gears, boosting either Mega only or a variety, will likely depend.
 Grapple seriously with the issue of art credit. We’re currently only using Time & Bond Man’s sprites illegally, but that will quite obviously change later down the line.
 Visible countdown for Bolt earning. Possibly displayed in minutes:seconds, if we can figure out the remainder.
+Tagging of upgrades so we can adequately discount everything when weapons are purchased.
+Distinct shop sections, each pulled up with a button that hides and shows objects tagged. Distinct vendors for each, themselves a button, and a seperate log for each, that has dialogue when the button is clicked.
+Dialogue cleared each time before a new line would be output, or else after a timer.
+Additional dialogue on each upgrade purchased? See if we can rig on buy lines to run outside of the upgrades themselves. Could possibly rig something on a timer to only trigger if the upgrade is owned, and you've yet to see the line?
+Purchaseable tab where you can retrigger previous lines of story text, once we actually add more of those in.
