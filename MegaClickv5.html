@@ -176,15 +176,21 @@ Resources
 	[i:robotResources %name="Heat" %icon="6,3"]
 	[i:robotResources %name="Wood" %icon="7,3"]
 	/*
+	[i:pinkResources %name="Enker" %icon="4,17"]
+	[i:pinkResources %name="Rush" %icon="2,1"]
+	[i:robotResources %name="Quake" %icon="15,1"]
 	//Mega Man 3
-	[i:robotResources %name="" %icon=","]
-	[i:robotResources %name="" %icon=","]
-	[i:robotResources %name="" %icon=","]
-	[i:robotResources %name="" %icon=","]
-	[i:robotResources %name="" %icon=","]
-	[i:robotResources %name="" %icon=","]
-	[i:robotResources %name="" %icon=","]
-	[i:robotResources %name="" %icon=","]
+	[i:robotResources %name="Needle" %icon="0,4"]
+	[i:robotResources %name="Magnet" %icon="1,4"]
+	[i:robotResources %name="Gemini" %icon="2,4"]
+	[i:robotResources %name="Hard" %icon="3,4"]
+	[i:robotResources %name="Top" %icon="4,4"]
+	[i:robotResources %name="Snake" %icon="5,4"]
+	[i:robotResources %name="Spark" %icon="6,4"]
+	[i:robotResources %name="Shadow" %icon="7,4"]
+	[i:robotResources %name="Proto" %icon="3,1"]
+	[i:pinkResources %name="Quint" %icon="3,17"]
+	[i:robotResources %name="Vesper" %icon="16,1"]
 	*/
 
 Buildings
@@ -232,15 +238,21 @@ Buildings
 	[i:robotMaster %name="Heat" %number="015" %flavor="Improving on Fire Man's design, Heat Man's heat resistance lets him get right up in the action." %icon="6,3" %z="24000" %p="0.08" %cost="2400000"]
 	[i:robotMaster %name="Wood" %number="016" %flavor="A unique Robot made from japanese cypresses, Wood Man brings a natural touch to the stage." %icon="7,3" %z="24000" %p="0.09" %cost="2400000"]
 	/*
+	[i:pinkMaster %name="Enker" %code="MKN." %number="001" %flavor="The first in a line devoted entirely to Mega Man's destruction, Enker has few interests outside of that. Perhaps the theater will be just what he needs." %icon="4,17" %z="" %p="0." %cost=""]
+	[i:pinkMaster %name="Rush" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Quake" %title="Woman" %textColor="9f61a7" %code="LMN." %number="001" %flavor="Built by the esteemed Dr. LaLinde, Tempo is good in a crisis, and better on stage." %icon="15,1" %z="" %p="0." %cost=""]
 	//Mega Man 3
-	[i:robotMaster %name="" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
-	[i:robotMaster %name="" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
-	[i:robotMaster %name="" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
-	[i:robotMaster %name="" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
-	[i:robotMaster %name="" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
-	[i:robotMaster %name="" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
-	[i:robotMaster %name="" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
-	[i:robotMaster %name="" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Needle" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Magnet" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Gemini" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Hard" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Top" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Snake" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Spark" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Shadow" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Proto" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
+	[i:pinkMaster %name="Quint" %number="" %flavor="" %icon="3,17" %z="" %p="0." %cost=""]
+	[i:robotMaster %name="Vesper" %number="" %flavor="" %icon="," %z="" %p="0." %cost=""]
 	*/
 
 Upgrades
@@ -280,7 +292,7 @@ Upgrades
 		req:10 Roll
 		passive:multiply yield of Roll by 2
 		cost:800 zenny
-	[i:pinkVariant %name="Roll" %flavor="It smells nicer than the usual kind." %icon="1,1" %req="15" %cost="10000"
+	[i:pinkVariant %name="Roll" %flavor="It smells nicer than the usual kind." %icon="1,1" %req="15" %cost="10000"]
 	*RollUpgrade25
 		name:Roll Buster
 		desc:Boosts Roll's production by <b>1%</b> of your total production per second.<q>Roll is outfitted with her own Buster, helping her keep ne'er-do-wells out of the theater.</q>
@@ -420,6 +432,66 @@ Upgrades
 	[i:gearVariant %name="Wood" %flavor="Careful not to get a splinter." %icon="7,3" %req="50" %cost="80000000000"]
 	[i:robotUpgrades %robot="Wood" %name1="Reinforced Laminate" %name2="Pet Turtle" %flavor1="This laminate keeps Wood Man in good working order." %flavor2="A nice pet turtle for Wood Man." %icon="7,3" %cost1="250000000000" %cost2="100000000"]
 	[i:specialWeapon %robot="Wood" %name="Leaf Shield" %flavor="Rotating Ceratanium leaves that provide a powerful defensive option." %icon="7,3" %target="Air"]
+	/*
+	//Enker
+	[i:pinkUnlock %robot="" %name="" %flavor="" %icon="," %req="" %boost="" %cost=""]
+	[i:pinkVariant %name="" %flavor="" %icon="," %req="" %cost=""]
+	[i:pinkUpgrades %robot="" %name1="" %name2="" %flavor1="" %flavor2="" %icon="," %cost1="" %cost2=""]
+	[i:pinkWeapon %robot="" %name="" %flavor="" %icon=","]
+	//Rush
+	
+	//Quake Woman
+	
+	// Man
+	[i:unlockUpgrade %robot="" %name="" %flavor="" %icon=",4" %req="10 Rush" %boost="3" %cost=""]
+	[i:gearVariant %name="" %flavor="" %icon=",4" %req="75" %cost=""]
+	[i:robotUpgrades %robot="" %name1="" %name2="" %flavor1="" %flavor2="" %icon=",4" %cost1="" %cost2=""]
+	[i:specialWeapon %robot="" %name="" %flavor="" %icon=",4" %target=""]
+	// Man
+	[i:unlockUpgrade %robot="" %name="" %flavor="" %icon=",4" %req="10 Rush" %boost="3" %cost=""]
+	[i:gearVariant %name="" %flavor="" %icon=",4" %req="75" %cost=""]
+	[i:robotUpgrades %robot="" %name1="" %name2="" %flavor1="" %flavor2="" %icon=",4" %cost1="" %cost2=""]
+	[i:specialWeapon %robot="" %name="" %flavor="" %icon=",4" %target=""]
+	// Man
+	[i:unlockUpgrade %robot="" %name="" %flavor="" %icon=",4" %req="10 Rush" %boost="3" %cost=""]
+	[i:gearVariant %name="" %flavor="" %icon=",4" %req="75" %cost=""]
+	[i:robotUpgrades %robot="" %name1="" %name2="" %flavor1="" %flavor2="" %icon=",4" %cost1="" %cost2=""]
+	[i:specialWeapon %robot="" %name="" %flavor="" %icon=",4" %target=""]
+	// Man
+	[i:unlockUpgrade %robot="" %name="" %flavor="" %icon=",4" %req="10 Rush" %boost="3" %cost=""]
+	[i:gearVariant %name="" %flavor="" %icon=",4" %req="75" %cost=""]
+	[i:robotUpgrades %robot="" %name1="" %name2="" %flavor1="" %flavor2="" %icon=",4" %cost1="" %cost2=""]
+	[i:specialWeapon %robot="" %name="" %flavor="" %icon=",4" %target=""]
+	// Man
+	[i:unlockUpgrade %robot="" %name="" %flavor="" %icon=",4" %req="10 Rush" %boost="3" %cost=""]
+	[i:gearVariant %name="" %flavor="" %icon=",4" %req="75" %cost=""]
+	[i:robotUpgrades %robot="" %name1="" %name2="" %flavor1="" %flavor2="" %icon=",4" %cost1="" %cost2=""]
+	[i:specialWeapon %robot="" %name="" %flavor="" %icon=",4" %target=""]
+	// Man
+	[i:unlockUpgrade %robot="" %name="" %flavor="" %icon=",4" %req="10 Rush" %boost="3" %cost=""]
+	[i:gearVariant %name="" %flavor="" %icon=",4" %req="75" %cost=""]
+	[i:robotUpgrades %robot="" %name1="" %name2="" %flavor1="" %flavor2="" %icon=",4" %cost1="" %cost2=""]
+	[i:specialWeapon %robot="" %name="" %flavor="" %icon=",4" %target=""]
+	// Man
+	[i:unlockUpgrade %robot="" %name="" %flavor="" %icon=",4" %req="10 Rush" %boost="3" %cost=""]
+	[i:gearVariant %name="" %flavor="" %icon=",4" %req="75" %cost=""]
+	[i:robotUpgrades %robot="" %name1="" %name2="" %flavor1="" %flavor2="" %icon=",4" %cost1="" %cost2=""]
+	[i:specialWeapon %robot="" %name="" %flavor="" %icon=",4" %target=""]
+	// Man
+	[i:unlockUpgrade %robot="" %name="" %flavor="" %icon=",4" %req="10 Rush" %boost="3" %cost=""]
+	[i:gearVariant %name="" %flavor="" %icon=",4" %req="75" %cost=""]
+	[i:robotUpgrades %robot="" %name1="" %name2="" %flavor1="" %flavor2="" %icon=",4" %cost1="" %cost2=""]
+	[i:specialWeapon %robot="" %name="" %flavor="" %icon=",4" %target=""]
+	//Proto Man
+	
+	//Quint
+	[i:pinkUnlock %robot="" %name="" %flavor="" %icon="," %req="" %boost="" %cost=""]
+	[i:pinkVariant %name="" %flavor="" %icon="," %req="" %cost=""]
+	[i:pinkUpgrades %robot="" %name1="" %name2="" %flavor1="" %flavor2="" %icon="," %cost1="" %cost2=""]
+	[i:pinkWeapon %robot="" %name="" %flavor="" %icon=","]
+	//Vesper Woman
+	
+	*/
 	//? Cans
 	*canUpgradeOne
 		name:Frequent Shipments
@@ -535,6 +607,9 @@ Achievements
 	[i:robotAchievements %robot="Heat" %name10="Heat Miser" %name25="Mr. Sun" %name50="Green Christmas" %name75="12000°" %name100="Starting to Melt" %icon="6,3"]
 	[i:robotAchievements %robot="Wood" %name10="Green Thumb" %name25="Solid Cypress" %name50=">:]" %name75="Friend of Wood" %name100="My Last Message" %flavor100=".<q>Don't forget about me.</q>" %icon="7,3"]
 	/*
+	[i:pinkAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
+	[i:pinkAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
+	[i:robotAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
 	//Mega Man 3
 	[i:robotAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
 	[i:robotAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
@@ -543,6 +618,9 @@ Achievements
 	[i:robotAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
 	[i:robotAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
 	[i:robotAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
+	[i:robotAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
+	[i:robotAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
+	[i:pinkAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
 	[i:robotAchievements %robot="" %name10="" %name25="" %name50="" %name75="" %name100="" %icon=","]
 	*/
 	//Playtime
@@ -767,6 +845,21 @@ Includes
 			req:50 [%robot][%title]
 			passive:multiply yield of [%robot][%title] by 2
 			cost:[%cost2] publicity
+	*include pinkUpgrades %robot %name1 %name2 %flavor1 %flavor2 %icon %cost1 %cost2
+		*[%robot]Upgrade25
+			name:[%name1]
+			desc:Boosts [%robot]'s production by <b>100%</b>.<q>[%flavor1]</q>
+			icon:icons[0,0] icons[[%icon]]
+			req:25 [%robot]
+			passive:multiply yield of [%robot] by 2
+			cost:[%cost1] zenny
+		*[%robot]Upgrade50
+			name:[%name2]
+			desc:Boosts [%robot]'s production by <b>100%</b>.<q>[%flavor2]</q>
+			icon:icons[0,0] icons[[%icon]]
+			req:50 [%robot]
+			passive:multiply yield of [%robot] by 2
+			cost:[%cost2] publicity
 	*include specialWeapon %robot %name %title="Man" %flavor %icon %target %targetTitle="Man"
 		*[%robot]Weapon
 			name:[%name]
@@ -777,6 +870,18 @@ Includes
 				multiply yield of [%robot][%title] by 2
 				multiply yield of MegaMan by 2
 				multiply cost of [%target][%targetTitle] by .95
+			end
+			cost:1 yashichi
+	*include pinkWeapon %robot %name %flavor %icon
+		*[%robot]Weapon
+			name:[%name]
+			desc:Boosts [%robot] and Mega Man's production by <b>100%</b>.<q>[%flavor]</q>
+			icon:icons[1,0] icons[[%icon]]
+			req:75 [%robot], 1 MegaMan
+			passive:
+				multiply yield of [%robot] by 2
+				multiply yield of MegaMan by 2
+				//multiply cost of [%target] by .95
 			end
 			cost:1 yashichi
 	*include robotResources %name %title="Man" %icon
